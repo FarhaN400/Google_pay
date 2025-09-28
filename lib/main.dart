@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_pay/Card.dart';
+import 'package:google_pay/bank.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,8 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false, home: MyPage());
@@ -21,7 +20,7 @@ class MyPage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: size.height * .20,
+        toolbarHeight: size.height * .22,
         flexibleSpace: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -79,7 +78,6 @@ class MyPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                //SizedBox(width: size.width * .14,),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -150,6 +148,8 @@ class MyPage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: 10,),
+              Bank_details(),
             ],
           ),
         ),
