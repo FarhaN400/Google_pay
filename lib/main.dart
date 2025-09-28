@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_pay/Card.dart';
 import 'package:google_pay/bank.dart';
+import 'package:google_pay/list.dart';
 
 void main() {
   runApp(MyApp());
@@ -122,7 +123,7 @@ class MyPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        height: size.height ,
+        height: size.height,
         color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -136,11 +137,11 @@ class MyPage extends StatelessWidget {
                     icon: Icon(Icons.emoji_events_outlined),
                     fText: "₹197",
                     sText: "Reward eraned",
-                    fcolor:Color(0xFFFFC107),
+                    fcolor: Color(0xFFFFC107),
                   ),
-                  SizedBox(width: 12,),
+                  SizedBox(width: 12),
                   MyCard(
-                    color:Color(0xFF083B46),
+                    color: Color(0xFF083B46),
                     icon: Icon(Icons.person_outlined),
                     fText: "Get ₹101",
                     sText: "Refer a friend",
@@ -148,8 +149,51 @@ class MyPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
               Bank_details(),
+              SizedBox(height: 10),
+              MyList(
+                icon: Icon(Icons.credit_card_outlined),
+                fText: "Pay with credit or debit card",
+                sText: "Pay bills with your card",
+                Add: true,
+                New: false,
+              ),
+              MyList(
+                icon: Icon(Icons.qr_code_2),
+                fText: "Your QR code",
+                sText: "use to receive money from any UPI id",
+                New: false,
+                Add: false,
+              ),
+              MyList(
+                icon: Icon(Icons.favorite_border_outlined),
+                fText: "UPI Circle",
+                sText: "Help people you trust make UPI payments",
+                New: true,
+                Add: false,
+              ),
+              MyList(
+                icon: Icon(Icons.settings),
+                fText: "Settings",
+                sText: "",
+                New: false,
+                Add: false,
+              ),
+              MyList(
+                icon: Icon(Icons.account_circle_outlined),
+                fText: "Manage Google account",
+                sText: "",
+                New: false,
+                Add: false,
+              ),
+              MyList(
+                icon: Icon(Icons.help_outline),
+                fText: "Get Help",
+                sText: "",
+                New: false,
+                Add: false,
+              ),
             ],
           ),
         ),

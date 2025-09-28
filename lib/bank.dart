@@ -80,16 +80,16 @@ class Bank_details extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(24),
                                 color: Color(0xFF87CEEB),
-                                border: Border.all(color: CupertinoColors.black,width: 2)
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.add,
-                                  color: Colors.black87,
+                                border: Border.all(
+                                  color: CupertinoColors.black,
+                                  width: 2,
                                 ),
                               ),
+                              child: Center(
+                                child: Icon(Icons.add, color: Colors.black87),
+                              ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                       SizedBox(height: 20),
@@ -109,11 +109,7 @@ class Bank_details extends StatelessWidget {
                       Stack(
                         clipBehavior: Clip.none,
                         children: [
-                          Icon(
-                            Icons.bolt,
-                            color: Color(0xFF87CEEB),
-                            size: 39,
-                          ),
+                          Icon(Icons.bolt, color: Color(0xFF87CEEB), size: 39),
                           Positioned(
                             bottom: 0,
                             right: 0,
@@ -122,15 +118,12 @@ class Bank_details extends StatelessWidget {
                               height: 18,
                               decoration: BoxDecoration(
                                 color: Colors.pinkAccent,
-                                borderRadius: BorderRadius.circular(22)
+                                borderRadius: BorderRadius.circular(22),
                               ),
-                              child: Icon(
-                                Icons.error_outline,
-                                size: 18,
-                              ),
+                              child: Icon(Icons.error_outline, size: 18),
                             ),
-                          )
-                        ]
+                          ),
+                        ],
                       ),
                       SizedBox(height: 20),
                       Text(
@@ -143,7 +136,7 @@ class Bank_details extends StatelessWidget {
                         height: 25,
                         decoration: BoxDecoration(
                           color: Color(0xFFD32F2F),
-                          borderRadius: BorderRadius.circular(22)
+                          borderRadius: BorderRadius.circular(22),
                         ),
                         child: Center(
                           child: Text(
