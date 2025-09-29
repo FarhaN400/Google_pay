@@ -21,7 +21,7 @@ class MyList extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       width: size.width,
-      height: 55,
+      height: 65,
       decoration: BoxDecoration(color: CupertinoColors.black),
       child: Column(
         children: [
@@ -37,7 +37,7 @@ class MyList extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(icon?.icon, color: Color(0xFF87CEEB), size: 38),
+                    Icon(icon?.icon, color: Color(0xFF87CEEB), size: 30),
                     SizedBox(width: 8),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,39 +47,38 @@ class MyList extends StatelessWidget {
                             Text(
                               fText!,
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 15,
                                 color: CupertinoColors.white,
                               ),
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(width: 10),
                             New!
                                 ? Container(
-                              width: 40,
-                              height: 18,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(17),
-                                color: Color(0xFF87CEEB),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "New",
-                                  style: TextStyle(
-                                    color: CupertinoColors.black,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            )
+                                    width: 40,
+                                    height: 18,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(17),
+                                      color: Color(0xFF87CEEB),
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "New",
+                                        style: TextStyle(
+                                          color: CupertinoColors.black,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ),
+                                  )
                                 : Text(""),
-                            SizedBox(width: 85,),
                             Add!
                                 ? Text(
-                              "Add",
-                              style: TextStyle(
-                                color: Color(0xFF87CEEB),
-                                fontSize: 18,
-                              ),
-                            )
+                                    "Add",
+                                    style: TextStyle(
+                                      color: Color(0xFF87CEEB),
+                                      fontSize: 18,
+                                    ),
+                                  )
                                 : Text(""),
                           ],
                         ),
